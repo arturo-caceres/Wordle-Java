@@ -14,6 +14,7 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello Player, Good luck!");
 
+//		Read the word list directly from the file when the application starts
 		List<String> list = new ArrayList<String>();
 		try {
 			File myObj = new File("words.txt");
@@ -28,6 +29,8 @@ public class Main {
 			e.printStackTrace();
 		}
 
+		
+		
 		final String word = list.get((int) (Math.random() * list.size()));
 		Scanner userInput = new Scanner(System.in);
 
@@ -85,6 +88,10 @@ public class Main {
 
 		System.out.println(socialResult);
 		System.out.println("\nResults are already on your clipboard, go share it on social media! 🤩🏆");
+
+		
+//		Generate an output of the word/guesses and copy it to the user's clipboard so they can share it on socials
+//		Bonus: Use emojis
 
 		StringSelection selection = new StringSelection(socialResult);
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
