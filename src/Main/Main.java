@@ -38,21 +38,21 @@ public class Main {
 				 boolean didBreak = false;
 				 for (int j=0; j< word.length(); j++) {
 					 if(guess.charAt(i)==word.charAt(i)) {
-						 System.out.println("Y");
+						 System.out.println(ConsoleColors.GREEN_BOLD + "Y" + ConsoleColors.RESET);
 						 didBreak = true;
 						 break;
 					 }
 					 
 					 
 					 if(guess.charAt(i)==word.charAt(j)) {
-						 System.out.println("C");
+						 System.out.println(ConsoleColors.YELLOW_BOLD + "C" + ConsoleColors.RESET );
 						 didBreak = true;
 						 break;
 					 }
 				 }
 				 
 				 if(!didBreak ) {
-					 System.out.println("X");
+					 System.out.println(ConsoleColors.WHITE + "X" + ConsoleColors.RESET);
 				 }
 			 }
 			
